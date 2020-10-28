@@ -1,4 +1,493 @@
+@font-face {
+    font-family: 'Noe Text';
+    src: url("/NoeText.woff2") format("woff2"),
+        url("/NoeText.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noe Text';
+    src: url("/NoeText-Bold.woff2") format("woff2"),
+        url("/NoeText-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noe Text';
+    src: url("/NoeText-SemiBoldItalic.woff2") format("woff2"),
+        url("/NoeText-SemiBoldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Noe Text';
+    src: url("/NoeText-BoldItalic.woff2") format("woff2"),
+        url("/NoeText-BoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Noe Text';
+    src: url("/NoeText-BlackItalic.woff2") format("woff2"),
+        url("/NoeText-BlackItalic.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Noe Text';
+    src: url("/NoeText-SemiBold.woff2") format("woff2"),
+        url("/NoeText-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noe Text';
+    src: url("/NoeText-Black.woff2") format("woff2"),
+        url("/NoeText-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noe Text';
+    src: url("/NoeText-Italic.woff2") format("woff2"),
+        url("/NoeText-Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+.mobile_appbar {
+  top: initial !important;
+  bottom: 0 !important;
+}
+
 header.v-sheet.theme--dark.v-toolbar.v-app-bar.v-app-bar--fixed.primary {
-  top: initial;
-  bottom: 0;
+    background-color: #171717 !important;
+}
+
+.v-app-bar.v-toolbar {
+    background-color: #00000000 !important;
+}
+
+/* Style the header */
+  
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+  
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    z-index: 2;
+    margin: 32px;
+    padding: 8px 16px;
+    border-radius: 35px;
+    background: #000000;
+    align-self: center;
+}
+
+.menu.mobile_menu {
+    position: fixed;
+    z-index: 2;
+    padding: 8px 16px;
+    background: hsl(0deg 0% 0%);
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+
+.menu .v-btn__content {
+    color: #ffffff;
+}
+
+.container {
+    padding-left: 52px !important;
+    padding-right: 52px !important;
+    margin: 0 auto !important;
+    max-width: 924px !important;
+}
+
+.v-application--wrap {
+    /*align-items: flex-end;*/
+}
+
+.v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined) {
+    box-shadow: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Noe Text", serif !important;
+    font-weight: 900;
+    letter-spacing: normal !important;
+}
+
+h1 {
+    font-size: 90px !important;
+}
+
+h2 {
+    font-size: 70px !important;
+}
+
+h3 {
+    font-size: 40px !important;
+}
+
+h4 {
+    font-size: 30px !important;
+    font-weight: 400 !important;
+}
+
+.card_subtitle {
+    font-family: "Open Sans" !important;
+    background: #2b2b2b00 !important;
+    font-size: 20px !important;
+    text-align: center;
+    padding: 0px !important;
+    border-radius: 30px !important;
+    color: white !important;
+    font-weight: 700;
+    text-align: center;
+}
+
+.v-item-group.theme--dark.v-slide-group.v-chip-group.v-chip-group--column {
+    margin-top: 10px;
+    font-family: "Open Sans" !important;
+}
+
+span.v-chip.v-chip--clickable.v-chip--no-color.theme--dark.v-size--default {
+    background: #141414 !important;
+    color: #767676;
+    font-weight: 700;
+}
+
+.v-card__text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px !important;
+}
+
+.dimmed {
+    color: hsla(0, 0%, 100%, 0.7);
+}
+
+body {
+    color: #fff;
+}
+
+#app .v-application{
+    color: #fff;
+    background-color: #000000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Noe Text", sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.v-carousel {
+    height: 800px !important;
+}
+
+.v-image.v-responsive.v-carousel__item.theme--dark {
+    height: 800px !important;
+}
+
+.tip {
+    bottom: 0px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: #1e1e1e;
+}
+
+#nav {
+    padding: 30px;
+}
+  
+#nav a {
+      font-weight: bold;
+      color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+      color: #42b983;
+}
+
+
+.meta {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 1px;
+    background-color: #0bbba9;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.col, .col-sm-3, .col-md-3, .col-lg-3, .col-12 {
+    padding: 20px !important;
+}
+
+.fw_col {
+    border-right: 1px solid hsla(0, 0%, 100%, 0.12);
+}
+
+.fw_col:last-child {
+    border-right: none;
+}   
+
+aside.v-navigation-drawer {
+    width: 120px !important;
+    position: fixed;
+    color: #fff;
+    background-color: #171717 !important;
+    border-right: 1px solid hsla(0, 0%, 100%, 0.12);
+}
+
+.v-app-bar.v-toolbar .col {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.v-toolbar__content, .v-toolbar__extension {
+    padding: 0px !important;
+}
+
+
+.row {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+.v-application ul, .v-application ol {
+    padding-left: 0px !important;
+    margin-bottom: 30px;
+
+}
+
+.v-application li {
+    display: block;
+    font-family: "Open Sans";
+    font-size: 20px;
+}
+
+.v-stepper {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.v-stepper__header, .v-stepper__items {
+    box-shadow: none !important;
+}
+
+.v-stepper__content {
+    padding: 0px !important;
+}
+
+.scroll-to-top {
+    position: fixed;
+    left: auto;
+    right: 32px;
+    top: 10px;
+    z-index: 10;
+    opacity: 0.5;
+}
+       
+
+@media (max-width: 600px) {
+
+    .home {
+        margin-left: initial !important;
+    }
+
+    .desktop_menu {
+        display: none;
+    }
+
+    .experience_container {
+        height: 1400px;
+    }
+    }
+
+
+
+.v-carousel .col {
+    padding: 60px 60px 60px 0px !important;
+}
+
+#map {
+    width: 100%;
+    height: 200px;
+    background-color: grey;
+  }
+
+.p_col {
+    border: 1px solid hsla(0, 0%, 100%, 0.12) !important;
+}
+
+a.v-btn.v-btn--contained.theme--light.v-size--default {
+    font-weight: 400 !important;
+    font-family: "Open Sans", serif;
+    font-size: 16px !important;
+    border-style: solid;
+    border-width: 0px;
+    border-color: hsla(0, 0%, 100%, 0.12);
+    letter-spacing: 0.0892857143em !important;
+    border-radius: 40px;
+    padding: 30px;
+    margin: 0px 20px 20px 0px;
+    background-color: #161616a1 !important;
+    color: #ffffff !important;
+}
+
+.v-btn.v-btn--contained.theme--light.v-size--default {
+    font-weight: 400 !important;
+    font-family: "Open Sans", serif;
+    font-size: 16px !important;
+    border-style: solid;
+    border-width: 0px;
+    border-color: hsla(0, 0%, 100%, 0.12);
+    letter-spacing: 0.0892857143em !important;
+    border-radius: 40px;
+    padding: 30px;
+    background-color: #16161600 !important;
+    color: #ffffff !important;
+    flex: auto;
+    flex-basis: 10px;
+}
+
+span.v-stepper__step__step {
+    display: none;
+}
+
+.v-stepper--alt-labels .v-stepper__step {
+    flex-basis: initial !important;
+}
+
+.v-stepper__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.v-stepper--vertical .v-stepper__step {
+    padding: 24px !important;
+}
+
+.v-stepper__step--active {
+    background-color: #1616166e !important;
+}
+
+.v-stepper__step--inactive {
+    background-color: #161616a1 !important;
+}
+
+.v-stepper__step {
+    font-weight: 400 !important;
+    font-family: "Open Sans", serif;
+    font-size: 18px !important;
+    border-style: solid;
+    border-width: 0px;
+    border-color: hsla(0, 0%, 100%, 0.12);
+    letter-spacing: 0.0892857143em !important;
+    border-radius: 40px;
+    margin: 0px 0px 20px 0px;
+    width: 300px;
+    text-transform: uppercase;
+}
+
+.v-application--is-ltr .theme--dark.v-stepper--vertical .v-stepper__content:not(:last-child) {
+    border-left: none !important;
+}
+.v-application--is-ltr .v-stepper--vertical .v-stepper__content {
+    margin: 0px !important;
+}
+
+.v-application p {
+    /*font-family: "Open Sans";*/
+    /*font-size: 22px;*/
+    font-family: "Noe Text", serif !important;
+    margin-bottom: 20px !important;
+    font-weight: 400 !important;
+    font-size: 19px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+.v-image.v-responsive.card_content.theme--light {
+    margin: 60px 0px;
+}
+
+.card_content .v-responsive__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_subtitle {
+    margin-top: 10px;
+}
+
+.v-sheet.v-card {
+    border-radius: 25px !important;
+}
+
+.v-dialog.v-dialog--active {
+    width: auto !important;
+}
+
+.project_card {
+    background-color: #161616 !important;
+    color: #ffffff !important;
+}
+
+.project_card .v-image, .project_card h1, .project_card h2 {
+    padding: 30px 0px;
+}
+
+.hide {
+    display: none;
+}
+
+.v-image {
+    border-radius: 25px !important;
+}
+
+.v-image.v-responsive.card_content.theme--light {
+    margin: 60px 0px;
+}
+
+
+@media (min-width: 600px) {
+
+    .experience_container {
+        height: 1000px;
+    }
 }

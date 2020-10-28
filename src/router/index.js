@@ -11,17 +11,27 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/work',
+    name: 'Work',
     // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
+    // this generates a separate chunk (work.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "work" */ '../views/Work.vue')
+  },
+  {
+    path: '/project1',
+    name: 'Project1',
+    // route level code-splitting
+    // this generates a separate chunk (work.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "work" */ '../views/Project1.vue')
   }
 ]
 
 const router = new VueRouter({
-  routes
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes,
 })
 
 export default router
