@@ -130,9 +130,7 @@ section {
     max-width: 924px !important;
 }
 
-.v-application--wrap {
-    /*align-items: flex-end;*/
-}
+
 
 .v-sheet.v-app-bar.v-toolbar:not(.v-sheet--outlined) {
     box-shadow: none !important;
