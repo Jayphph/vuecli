@@ -26,33 +26,34 @@
             <p>I am an accomplished product designer with more than 10 years of experience and 6 years as a UX designer. I love building business applications for Airports, Hospitals, Smart buildings, Retail Stores and the Supply chain.</p>
           </v-responsive>
         </v-container>
-        <div id="myHeader" class="header container text-center d-none d-sm-block sticky">
-          <div class="hidden-nav-button">
-          </div>
-          <v-btn class="nav_button" @click="$vuetify.goTo('#work', options)">
-            <span>
-              Work
-            </span>
-          </v-btn>
-          <v-btn class="nav_button" @click="$vuetify.goTo('#experience', options)">
-            <span>
-              Experience
-            </span>
-          </v-btn>
-          <v-btn class="nav_button" @click="$vuetify.goTo('#about', options)">
-            <span>
-              About
-            </span>
-          </v-btn>
-          <div class="hidden-nav-button">
-            <div id="scrollToTop" class="hide">
-              <v-btn class="nav_button" ref="button" @click="$vuetify.goTo('#top', options)">
-                  <v-icon>mdi-arrow-up</v-icon>
-              </v-btn>
+        <div class="header-container d-none d-sm-block">
+          <div id="myHeader" class="header container text-center d-none d-sm-block">
+            <div class="hidden-nav-button">
+            </div>
+            <v-btn class="nav_button" @click="$vuetify.goTo('#work', options)">
+              <span>
+                Work
+              </span>
+            </v-btn>
+            <v-btn class="nav_button" @click="$vuetify.goTo('#experience', options)">
+              <span>
+                Experience
+              </span>
+            </v-btn>
+            <v-btn class="nav_button" @click="$vuetify.goTo('#about', options)">
+              <span>
+                About
+              </span>
+            </v-btn>
+            <div class="hidden-nav-button">
+              <div id="scrollToTop" class="hide">
+                <v-btn class="nav_button" ref="button" @click="$vuetify.goTo('#top', options)">
+                    <v-icon>mdi-arrow-up</v-icon>
+                </v-btn>
+              </div>
             </div>
           </div>
         </div>
-        <div class="content"></div>
         <v-container class="work">
   
           <h2 id="work" class="text-center">Work</h2>
@@ -64,7 +65,7 @@
             delimiter-icon="mdi-circle-medium"
           >
               <v-carousel-item :key="i" v-for="(project, i) in projects">
-                  <v-dialog v-model="dialog" max-width="880" scrollable :key="`dialog-${i}`">                
+                  <v-dialog v-model="dialog[`project${i}`]" max-width="880" scrollable :key="`dialog-${i}`">                
                       <template v-slot:activator="{ on, attrs }">
                           <v-card v-bind="attrs" v-on="on" class="mx-auto my-8" max-width="550">
                               <v-img class="card_content" height="500" :src="project.coverimg1">
@@ -77,7 +78,7 @@
                               </div>
                           </v-card>
                       </template>
-                      <v-card v-bind="attrs" v-on="on" class="project_card" @click="dialog = false" :key="`card-${i}`">
+                      <v-card class="project_card" @click="dialog[`project${i}`] = false" :key="`card-${i}`">
                         <v-card-title>
                           <h5 v-text="project.title"></h5>
                           <v-spacer></v-spacer>
@@ -251,6 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Get the offset position of the navbar
   var sticky = header.offsetTop;
+  console.log("🚀 ~ file: HelloWorld.vue ~ line 268 ~ document.addEventListener ~ sticky", sticky)
 
   // Add the sticky class to the navbar when you reach its scroll position. 
   // Remove "sticky" when you leave the scroll position
@@ -269,7 +271,8 @@ document.addEventListener('DOMContentLoaded', function() {
   export default {
     data () {
       return {
-        dialog: false,
+        dialog: {},
+        cycle: false,
         showBackToTop: false,
         e1: 1,
         projects: [
@@ -453,6 +456,12 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         ],
       }
+    },
+    mounted() {
+      this.projects.forEach((project, i) => {
+        console.log("🚀 ~ file: HelloWorld.vue ~ line 460 ~ this.projects.forEach ~ project", project)
+        this.dialog[`project${i}`] = false
+      });
     }
   }
   
