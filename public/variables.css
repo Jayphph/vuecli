@@ -87,12 +87,14 @@ header.v-sheet.theme--dark.v-toolbar.v-app-bar.v-app-bar--fixed.primary {
 .sticky {
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%
     }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
-    padding-top: 102px;
+    padding: 92px 16px;
 }
 
 section {
@@ -604,4 +606,8 @@ p.dimmed.context {
 .context_type {
     width: 50px;
     display: inline-block;
+}
+
+.header-container {
+    height: 60px;
 }
