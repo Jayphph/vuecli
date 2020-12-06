@@ -78,22 +78,22 @@ header.v-sheet.theme--dark.v-toolbar.v-app-bar.v-app-bar--fixed.primary {
 
 /* Style the header */
   
-  /* Page content */
-  .content {
+/* Page content */
+.content {
     padding: 16px;
-  }
-  
-  /* The sticky class is added to the header with JS when it reaches its scroll position */
-  .sticky {
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
     position: fixed;
     top: 0;
     width: 100%
-  }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
+    }
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
     padding-top: 102px;
-  }
+}
 
 section {
     display: flex;
@@ -101,7 +101,7 @@ section {
 }
 
 .header {
-    z-index: 2;
+    z-index: 8;
     margin: 32px;
     padding: 8px 16px;
     border-radius: 35px;
@@ -124,10 +124,8 @@ section {
 }
 
 .container {
-    padding-left: 52px !important;
-    padding-right: 52px !important;
     margin: 0 auto !important;
-    max-width: 924px !important;
+    max-width: 834px !important;
 }
 
 
@@ -155,21 +153,15 @@ h3 {
 }
 
 h4 {
-    font-size: 30px !important;
-    font-weight: 400 !important;
+    font-size: 28px !important;
 }
 
-.card_subtitle {
-    font-family: "Open Sans" !important;
-    background: #2b2b2b00 !important;
+h5 {
     font-size: 20px !important;
-    text-align: center;
-    padding: 0px !important;
-    border-radius: 30px !important;
-    color: white !important;
-    font-weight: 700;
-    text-align: center;
+    font-family: "Open Sans" !important;
+    margin: 6px 0px 10px 0px;
 }
+
 
 .v-item-group.theme--dark.v-slide-group.v-chip-group.v-chip-group--column {
     margin-top: 10px;
@@ -185,11 +177,15 @@ span.v-chip.v-chip--clickable.v-chip--no-color.theme--dark.v-size--default {
 .v-card__text {
     display: flex;
     flex-direction: column;
-    padding: 20px 30px !important;
+    padding: 10px 24px !important;
+}
+
+.v-card__text p {
+    margin-bottom: 6px;
 }
 
 .dimmed {
-    color: hsla(0, 0%, 100%, 0.7);
+    opacity: 0.5;
 }
 
 body {
@@ -201,13 +197,13 @@ body {
     background-color: #000000;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: "Noe Text", sans-serif;
+    font-family: "open sans" !important;
     font-weight: 400;
-    font-size: 26px;
+    font-size: 20px;
 }
 
 .v-carousel {
-    height: 800px !important;
+    height: 640px !important;
 }
 
 .v-image.v-responsive.v-carousel__item.theme--dark {
@@ -292,8 +288,6 @@ aside.v-navigation-drawer {
 
 .v-application li {
     display: block;
-    font-family: "Open Sans";
-    font-size: 20px;
 }
 
 .v-stepper {
@@ -309,15 +303,12 @@ aside.v-navigation-drawer {
     padding: 0px !important;
 }
 
-.scroll-to-top {
-    position: fixed;
-    left: auto;
-    right: 32px;
-    top: 10px;
-    z-index: 10;
+.hidden-nav-button {
     opacity: 0.5;
-}
-       
+    display: inline-flex;
+    vertical-align: middle;
+    width: 64px;
+}      
 
 @media (max-width: 600px) {
 
@@ -329,9 +320,6 @@ aside.v-navigation-drawer {
         display: none;
     }
 
-    .experience_container {
-        height: 1400px;
-    }
     }
 
 
@@ -350,20 +338,6 @@ aside.v-navigation-drawer {
     border: 1px solid hsla(0, 0%, 100%, 0.12) !important;
 }
 
-a.v-btn.v-btn--contained.theme--light.v-size--default {
-    font-weight: 400 !important;
-    font-family: "Open Sans", serif;
-    font-size: 16px !important;
-    border-style: solid;
-    border-width: 0px;
-    border-color: hsla(0, 0%, 100%, 0.12);
-    letter-spacing: 0.0892857143em !important;
-    border-radius: 40px;
-    padding: 30px;
-    margin: 0px 20px 20px 0px;
-    background-color: #161616a1 !important;
-    color: #ffffff !important;
-}
 
 .v-btn.v-btn--contained.theme--light.v-size--default {
     font-weight: 400 !important;
@@ -374,11 +348,21 @@ a.v-btn.v-btn--contained.theme--light.v-size--default {
     border-color: hsla(0, 0%, 100%, 0.12);
     letter-spacing: 0.0892857143em !important;
     border-radius: 40px;
-    padding: 30px;
-    background-color: #16161600 !important;
     color: #ffffff !important;
     flex: auto;
     flex-basis: 10px;
+}
+
+.nav_button {
+    background-color: #16161600 !important;
+    padding: 20px 30px;
+}
+
+.link_button {
+    background-color: #161616a1 !important;
+    padding: 25px !important;
+    margin: 6px 0px;
+    height: 60px !important;
 }
 
 span.v-stepper__step__step {
@@ -396,27 +380,27 @@ span.v-stepper__step__step {
 }
 
 .v-stepper--vertical .v-stepper__step {
-    padding: 24px !important;
+    padding: 20px !important;
 }
 
-.v-stepper__step--active {
-    background-color: #1616166e !important;
+.v-stepper__step.v-stepper__step--editable {
+    background: #4e4e4e24 !important;
 }
 
-.v-stepper__step--inactive {
-    background-color: #161616a1 !important;
+.v-stepper__step.v-stepper__step--active {
+    background: #4e4e4e6e !important;
 }
 
 .v-stepper__step {
     font-weight: 400 !important;
     font-family: "Open Sans", serif;
-    font-size: 18px !important;
+    font-size: 16px !important;
     border-style: solid;
     border-width: 0px;
     border-color: hsla(0, 0%, 100%, 0.12);
     letter-spacing: 0.0892857143em !important;
     border-radius: 40px;
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 15px 0px;
     width: 300px;
     text-transform: uppercase;
 }
@@ -429,18 +413,8 @@ span.v-stepper__step__step {
 }
 
 .v-application p {
-    /*font-family: "Open Sans";*/
-    /*font-size: 22px;*/
-    font-family: "Noe Text", serif !important;
-    margin-bottom: 20px !important;
-    font-weight: 400 !important;
-    font-size: 19px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-}
-
-.v-image.v-responsive.card_content.theme--light {
-    margin: 60px 0px;
 }
 
 .card_content .v-responsive__content {
@@ -454,11 +428,136 @@ span.v-stepper__step__step {
 }
 
 .v-sheet.v-card {
-    border-radius: 25px !important;
+    border-radius: 10px !important;
 }
 
 .v-dialog.v-dialog--active {
     width: auto !important;
+}
+
+
+.hide {
+    display: none;
+}
+
+.v-image {
+    border-radius: 10px !important;
+}
+
+
+.v-carousel {
+    padding-top: 20px;
+}
+
+.v-carousel__controls {
+    top: 0;
+    height: 30px !important;
+}
+
+.v-window__prev, .v-window__next {
+    top: -14px !important;
+    z-index: 2 !important;
+}
+
+@media (min-width: 690px) {
+
+    .work {
+        max-width: 674px !important;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    h1 {      
+        font-size: 60px !important;
+    }
+
+    h2 {      
+        font-size: 45px !important;
+    }
+
+}
+
+
+@media (max-width: 376px) {
+
+    .container {
+        padding: 20px 30px !important;
+    }
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.v-expansion-panel-header {
+    letter-spacing: 0.0892857143em !important;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    text-align: center !important;
+    padding: 25px !important;
+}
+
+.v-expansion-panel-header__icon {
+    position: absolute;
+    left: 0;
+    top: 47px;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+    opacity: 0.3;
+}
+
+.v-expansion-panel-header__icon ::before {
+    font-size: 18px;
+    color: #fff;
+}
+
+.v-expansion-panel {
+    background: none !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.v-expansion-panel p {
+    color: #fff;
+}
+
+.experience_container {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.v-expansion-panel-header {
+    font-weight: 400 !important;
+    font-family: "Open Sans", serif;
+    font-size: 16px !important;
+    border-style: solid;
+    border-width: 0px;
+    border-color: hsla(0, 0%, 100%, 0.12);
+    letter-spacing: 0.0892857143em !important;
+    border-radius: 40px !important;
+    padding: 30px;
+    margin: 0px 0px 16px 0px;
+    background-color: #161616a1 !important;
+    color: #ffffff !important;
+    width: 290px !important;
+}
+
+button.v-expansion-panel-header.v-expansion-panel-header--active {
+    background-color: #2d2d2da1 !important;
+}
+
+.card_container {
+    padding: 32px 0px !important;
+    background-color: #161616 !important;
+    color: #ffffff !important;
+    font-size: 20px;
 }
 
 .project_card {
@@ -466,26 +565,43 @@ span.v-stepper__step__step {
     color: #ffffff !important;
 }
 
-.project_card .v-image, .project_card h1, .project_card h2 {
-    padding: 30px 0px;
+.card_container .v-image, .card_container h1, .card_container h2 {
+    padding: 45px 0px;
 }
 
-.hide {
-    display: none;
+span.close_card {
+    font-size: 14px;
+    opacity: 0.5;
 }
 
-.v-image {
-    border-radius: 25px !important;
-}
-
-.v-image.v-responsive.card_content.theme--light {
-    margin: 60px 0px;
+.v-card__text {
+    padding: 10px 40px !important;
 }
 
 
-@media (min-width: 600px) {
+.v-card__title {
+    padding: 20px 40px !important;
+}
 
-    .experience_container {
-        height: 1000px;
-    }
+.v-overlay__scrim {
+    background-color: rgb(0 0 0) !important;
+}
+
+.context span {
+    font-size: 16px;
+}
+
+p.dimmed.context {
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.imgcaption {
+    color: #fff;
+    padding: 10px 0px;
+}
+
+.context_type {
+    width: 50px;
+    display: inline-block;
 }
