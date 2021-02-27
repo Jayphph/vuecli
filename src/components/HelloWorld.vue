@@ -81,7 +81,7 @@
                               </div>
                           </v-card>
                       </template>
-                      <v-card class="project_card" @click="dialog[`project${i}`] = false" :key="`card-${i}`">
+                      <v-card class="project_card" @click="closeDialog(i)" :key="`card-${i}`">
                         <v-card-title>
                           <h5 v-text="project.title"></h5>
                           <v-spacer></v-spacer>
@@ -398,6 +398,14 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("🚀 ~ file: HelloWorld.vue ~ line 460 ~ this.projects.forEach ~ project", project)
         this.dialog[`project${i}`] = false
       });
+    },
+    methods: {
+      closeDialog(index) {
+        this.dialog = {
+          ...this.dialog,
+          [`project${index}`]: false
+        }
+      }
     }
   }
   
