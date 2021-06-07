@@ -18,7 +18,8 @@
       </v-btn>
     </div>
       <section id="top">
-        <div class="py-16"></div>
+        <div class="py-16 d-none d-sm-block"></div>
+        <div class="py-4 d-flex d-sm-none"></div>
         <v-container class="text-center">
           <h1>Hi ! I'm JF</h1>
           <h4 class="mb-6">A one-man digital product A-TEAM</h4>
@@ -56,7 +57,8 @@
             </div>
           </div>
         </div>
-        <div class="py-16"></div>
+        <div class="py-16 d-none d-sm-block"></div>
+        <div class="py-4 d-flex d-sm-none"></div>
         <v-container class="work" id="work">
           <div class="py-4"></div>  
           <h2 class="text-center">Work</h2>
@@ -85,7 +87,7 @@
                         <v-card-title>
                           <h5 v-text="project.title"></h5>
                           <v-spacer></v-spacer>
-                          <span class="close_card">Click anywhere to close</span>
+                          <span class="close_card">Close</span>
                         </v-card-title>
                         <v-divider></v-divider>
                         <v-card-text>
@@ -144,7 +146,8 @@
             </v-expansion-panel>
           </v-expansion-panels>
         </v-container>
-        <div class="py-10"></div>
+        <div class="py-10 d-none d-sm-block"></div>
+        <div class="py-4 d-flex d-sm-none"></div>
         <v-container id="about">
           <div class="py-4" id="top"></div>
           <h2 class="my-3 text-center">About me</h2>
@@ -204,6 +207,7 @@
             2020 JF Phaner, all rights reserved
           </p>
         </v-container>
+        <div class="py-4 d-flex d-sm-none"></div>
       </section>
   </v-app>
 </template>
