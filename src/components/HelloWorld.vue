@@ -20,7 +20,7 @@
       <section id="top">
         <div class="py-16"></div>
         <v-container class="text-center">
-          <h1>Hi ! I'm JF</h1>
+          <h1>Hi ! I'm Pipou</h1>
           <h4 class="mb-6">A one-man digital product A-TEAM</h4>
           <v-responsive class="mx-auto mb-8">
             <p class="mb-6">Product designer, UI dev and UX teacher</p>
