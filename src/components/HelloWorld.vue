@@ -20,14 +20,14 @@
       <section id="top">
         <div class="py-16"></div>
         <v-container class="text-center">
-          <h1>Hi ! I'm Pipou</h1>
-          <h4 class="mb-6">A one-man digital product A-TEAM</h4>
+          <h1>Hi ! I'm JF</h1>
           <v-responsive class="mx-auto mb-8">
-            <p class="mb-6">Product designer, UI dev and UX teacher</p>
-            <p>I am an accomplished product designer with more than 10 years of experience and 6 years as a UX designer. I love building business applications with great user value, for the supply chain, smart buildings, IOT and others ...</p>
+            <p class="mb-6">Product designer, project manager and UX teacher</p>
+            <p>I am an accomplished product designer with more than 13 years of experience in the digital industry and 6 years as a UX designer. I love building business applications with great user value, for the supply chain, smart buildings, IOT and others ...</p>
           </v-responsive>
         </v-container>
-        <div class="py-12"></div>
+        <div class="py-12 d-none d-sm-block"></div>
+        <div class="py-4 d-flex d-sm-none"></div>
         <div class="header-container d-none d-sm-block">
           <div id="myHeader" class="header container text-center d-none d-sm-block">
             <div class="hidden-nav-button">
@@ -56,7 +56,10 @@
             </div>
           </div>
         </div>
-        <div class="py-16"></div>
+        <div class="py-16 d-none d-sm-block"></div>
+        <div class="py-4 d-flex d-sm-none"></div>
+      </section>
+      <section>
         <v-container class="work" id="work">
           <div class="py-4"></div>  
           <h2 class="text-center">Work</h2>
@@ -68,7 +71,7 @@
             delimiter-icon="mdi-circle-medium"
           >
               <v-carousel-item :key="i" v-for="(project, i) in projects">
-                  <v-dialog v-model="dialog[`project${i}`]" max-width="880" scrollable :key="`dialog-${i}`">                
+                  <v-dialog v-model="dialog[`project${i}`]" max-width="926" scrollable :key="`dialog-${i}`">                
                       <template v-slot:activator="{ on, attrs }">
                           <v-card v-bind="attrs" v-on="on" class="mx-auto my-8" max-width="550">
                               <v-img class="card_content" height="500" :src="project.coverimg1">
@@ -81,7 +84,7 @@
                               </div>
                           </v-card>
                       </template>
-                      <v-card class="project_card" @click="closeDialog(i)" :key="`card-${i}`">
+                      <v-card id="project" class="project_card" @click="closeDialog(i)" :key="`card-${i}`">
                         <v-card-title>
                           <h5 v-text="project.title"></h5>
                           <v-spacer></v-spacer>
@@ -100,25 +103,24 @@
                             <p v-text="project.text1"></p>
                             <p v-text="project.text2"></p>
                             <p v-text="project.text3"></p>
+                            <div class="py-4"></div>
                           </v-container>
                           <v-img class="card_content" height="auto" :src="project.img1"></v-img>
                           <p class="imgcaption"><span v-text="project.captionimg1"></span></p>
-                          <v-container class="card_container">
-                          </v-container>
+                          <div class="py-4"></div>
                           <v-img class="card_content" height="auto" :src="project.img2"></v-img>
                           <p class="imgcaption"><span v-text="project.captionimg2"></span></p>
-                          <v-container class="card_container">
-                          </v-container>
+                          <div class="py-4"></div>
                           <v-img class="card_content" height="auto" :src="project.img3"></v-img>
                           <p class="imgcaption"><span v-text="project.captionimg3"></span></p>
-                          <v-container class="card_container">
-                          </v-container>
                         </v-card-text>
                       </v-card>
                   </v-dialog>
               </v-carousel-item>
           </v-carousel>
         </v-container>
+      </section>
+      <section>
         <v-container class="experience_container" id="experience">
           <div class="py-4"></div>  
           <h2 class="py-6 mb-6 text-center">Experience</h2>
@@ -144,7 +146,10 @@
             </v-expansion-panel>
           </v-expansion-panels>
         </v-container>
-        <div class="py-10"></div>
+        <div class="py-6 d-none d-sm-block"></div>
+        <div class="py-4 d-flex d-sm-none"></div>
+      </section>
+      <section>
         <v-container id="about">
           <div class="py-4" id="top"></div>
           <h2 class="my-3 text-center">About me</h2>
@@ -178,17 +183,20 @@
                     Call me: +33 6 98 63 39
                   </span>
                 </v-btn>
+                <div class="py-1"></div>
                 <v-btn class="link_button" href="mailto:jfphaner.pro@gmail.com">
                   <span>
                     Send me an email 
                   </span>
                 </v-btn>
-                <v-btn class="link_button" href="https://vuetifyjs.com">
+                <div class="py-1"></div>
+                <v-btn class="link_button" href="../Files/JFPHANER_CV2021.pdf" download>
                   <span>
                     Download my resume
                   </span>
                 </v-btn>
-                <v-btn class="link_button" href="https://vuetifyjs.com">
+                <div class="py-1"></div>
+                <v-btn class="link_button" href="https://www.linkedin.com/in/jf-phaner-37b1b516/">
                   <span>
                     Connect on LinkedIn
                   </span>
@@ -277,11 +285,11 @@ document.addEventListener('DOMContentLoaded', function() {
             chip4: 'User testing',
             coverimg1: '../Img/Row_01.png',
             img1: '../Img/Row_02.png',
-            captionimg1: 'VisioMapEditor first version',
-            img2: '../Img/vme03.jpg',
-            captionimg2: 'Sketches with the dev team',
-            img3: '../Img/mapeditor2.png',
-            captionimg3: 'VisioMapEditor 2',
+            captionimg1: 'Resulting',
+            img2: '',
+            captionimg2: '',
+            img3: '',
+            captionimg3: '',
             subtitle: 'From online catalog to a D2C platform',
             context1: 'Senior UX designer - 2019',
             context2: 'www.rowenta.fr',
