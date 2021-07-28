@@ -20,9 +20,9 @@
       <section id="top">
         <div class="py-16"></div>
         <v-container class="text-center">
-          <h1>Hi ! I'm JF</h1>
+          <h2>Hi ! I'm JF Phaner</h2>
           <v-responsive class="mx-auto mb-8">
-            <p class="mb-6">Product designer, project manager and UX teacher</p>
+            <p class="mb-6">Senior product designer, project manager and UX teacher</p>
             <p>I am an accomplished product designer with more than 13 years of experience in the digital industry and 6 years as a UX designer. I love building business applications with great user value, for the supply chain, smart buildings, IOT and others ...</p>
           </v-responsive>
         </v-container>
@@ -190,7 +190,9 @@
                   </span>
                 </v-btn>
                 <div class="py-1"></div>
-                <v-btn class="link_button" href="../Files/JFPHANER_CV2021.pdf" download>
+                <v-btn class="link_button" href="../Files/JFPHANER_CV2021.pdf" download
+                
+                >
                   <span>
                     Download my resume
                   </span>
