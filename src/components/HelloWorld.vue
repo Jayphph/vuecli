@@ -180,7 +180,7 @@
               <div class="contact">
                 <v-btn class="link_button" href="https://vuetifyjs.com">
                   <span>
-                    Call me: +33 6 98 63 39
+                    Call me: +33 6 22 98 63 39
                   </span>
                 </v-btn>
                 <div class="py-1"></div>
