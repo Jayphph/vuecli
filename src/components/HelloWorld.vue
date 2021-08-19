@@ -184,13 +184,13 @@
                   </span>
                 </v-btn>
                 <div class="py-1"></div>
-                <v-btn class="link_button" href="mailto:jfphaner.pro@gmail.com">
+                <v-btn class="link_button" href="mailto:jfphaner@gmail.com">
                   <span>
                     Send me an email 
                   </span>
                 </v-btn>
                 <div class="py-1"></div>
-                <v-btn class="link_button" href="../Files/JFPHANER_CV2021.pdf" download
+                <v-btn class="link_button" href="../Files/JFPHANER_CV2021_EN.pdf" download
                 
                 >
                   <span>
