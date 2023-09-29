@@ -3,7 +3,7 @@
     <div class="menu mobile_menu d-flex d-sm-none">
       <v-btn class="nav_button" @click="$vuetify.goTo('#work', options)">
         <span>
-          Work
+          Work 
         </span>
       </v-btn>
       <v-btn class="nav_button" @click="$vuetify.goTo('#experience', options)">
