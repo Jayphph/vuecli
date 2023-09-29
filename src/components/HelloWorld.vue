@@ -23,7 +23,7 @@
           <h2>Hi ! I'm JF Phaner</h2>
           <v-responsive class="mx-auto mb-8">
             <p class="mb-6">Senior product designer, project manager and UX teacher</p>
-            <p>I am an accomplished product designer with more than 13 years of experience in the digital industry and 6 years as a UX designer. I love building business applications with great user value, for the supply chain, smart buildings, IOT and others ...</p>
+            <p>I am an accomplished product designer with more than 15 years of experience in the digital industry and 6 years as a UX designer. I love building business applications with great user value, for the supply chain, smart buildings, IOT and others ...</p>
           </v-responsive>
         </v-container>
         <div class="py-12 d-none d-sm-block"></div>
